@@ -1,23 +1,13 @@
-import Head from 'next/head'
-import Header from '@components/Header'
-import Footer from '@components/Footer'
+git clone https://github.com/tholian-network/stealth.git;
 
-export default function Home() {
-  return (
-    <div className="container">
-      <Head>
-        <title>Next.js Starter!</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+# Make everything
+node ./make.mjs;
 
-      <main>
-        <Header title="Welcome to my app!" />
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
-      </main>
+# Start Stealth Service (optional debug flag)
+node ./stealth/stealth.mjs serve --debug=true;
 
-      <Footer />
-    </div>
-  )
-}
+# Open as Progressive Web App
+node ./browser/browser.mjs;
+
+# Alternatively open Stealth's Browser UI in a Web Browser
+# gio open "http://localhost:65432"
